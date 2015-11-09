@@ -1,12 +1,20 @@
 Rails.application.routes.draw do
+  resources :users_cards
   devise_for :debits
   devise_for :admins
   devise_for :users
+
+  resources :users
+  resources :debits
+
+  post '/signin', to: 'sessions#login'
+  delete '/signout', to: 'sessions#logout'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'home#homepage'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

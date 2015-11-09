@@ -1,0 +1,19 @@
+<%= form_for @debit do |d| %>
+	
+	<%= d.label :cardnumber, "Card Number" %>
+    <%= d.text_field :cardnumber, :required => true %>
+    <br />
+    <br />
+    <%= d.label :expirationmonth, "Expiration Month" %>
+    <%= d.text_field :expirationmonth, :required => true %> 
+    <br />
+    <br />
+    <%= d.label :expirationyear, "Expiration Year" %>
+    <%= d.password_field :expirationyear, :required => true %> 
+    <br />
+    <br />
+    <%= d.submit %>
+
+    <% end %>
+</div>
+  
